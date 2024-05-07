@@ -1,0 +1,5 @@
+1. Create an array full of quotes
+
+2. Create a function that takes three parameters of arrays of quotes
+
+3. Loop over the array parameter
