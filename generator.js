@@ -1,3 +1,5 @@
+const { randomBytes } = require("crypto");
+
 caoCaoQuotes = [
   "It is better to be feared than to be loved.",
   "Every adversity presents an opportunity for growth and learning.",
@@ -17,3 +19,22 @@ bismarkQuotes = [
 ];
 
 
+function mashed_quotes(quotes1, quotes2, quotes3) {
+  const outputQuote = [];
+
+  // random number for the quotes's index
+  randIndex = Math.floor(Math.random() * quotes1.length);
+
+  // generating a random quote from quotes1
+  outputQuote.push(quotes1[randIndex]);
+
+  // generating a random quote from quotes2
+  outputQuote.push(quotes2[randIndex]);
+
+  // generating a random quote from quotes3
+  outputQuote.push(quotes3[randIndex]);
+
+  return outputQuote.join(' ')
+}
+
+console.log(mashed_quotes(caoCaoQuotes, hitlerQuotes, bismarkQuotes))
